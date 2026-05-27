@@ -4,37 +4,25 @@ Routes:
 - `/pricing`
 - `/payment?planId=...`
 
-## Pricing Page Behavior
+## Pricing Cards
 
-- Plan cards adjust by plan configuration.
-- Custom category plans should show as **CUSTOM** where applicable.
-- Layout should auto-wrap cleanly for uneven card counts.
+- Plans are shown based on current plan setup.
+- Custom-category plans can appear as **CUSTOM**.
+- Card layout should auto-balance across screen widths.
 
-[IMG: Pricing cards and CTA layout]
+## Trial Message
 
-## Trial Messaging
+You may see a trial banner on landing pages that links directly to pricing.
 
-Landing pages may show trial promo strips.
-Recommended messaging includes:
-- 2-week trial
-- no card required
-- direct link to pricing page
+## Payment Page Behavior
 
-## Payment Page
+- For **server-scoped** plans, server selection is required.
+- For **user-scoped** plans, server selection is not required.
 
-For server-scoped plans:
-- server selector should be visible
-- purchase binds to selected server
+## Billing Output
 
-For user-scoped plans:
-- no server selector required
+After successful purchase/assignment, you can access subscription details and related invoice history where available.
 
-## Invoice and Email
+## Duration Note
 
-On successful purchase or assignment flows, invoice-related notifications can be sent through email manager/resend integration.
-
-## Time Units
-
-Current month unit policy target: 28 days (where configured by product rules).
-
-[VIDEO: Plan selection to successful checkout]
+Monthly unit in current product policy is 28 days.

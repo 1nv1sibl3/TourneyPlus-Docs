@@ -1,6 +1,4 @@
-# Dashboard Page Map
-
-Use this map for direct route lookup.
+# Page Map
 
 ## User Dashboard Routes
 
@@ -24,7 +22,7 @@ Use this map for direct route lookup.
 - `/pricing`
 - `/payment?planId=...`
 
-## Marketing/Policy Routes
+## Public Routes
 
 - `/`
 - `/about`
@@ -38,5 +36,3 @@ Use this map for direct route lookup.
 - `/refund`
 - `/contact`
 - `/careers`
-
-[IMG: Route map diagram]

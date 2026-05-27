@@ -1,6 +1,6 @@
 # Dashboard User Guide
 
-This is the quick index for dashboard operations.
+Use this index for all dashboard actions.
 
 - [Dashboard Overview](dashboard/dashboard-overview.md)
 - [Page Map](dashboard/page-map.md)

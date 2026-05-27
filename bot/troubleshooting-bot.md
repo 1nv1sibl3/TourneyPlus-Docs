@@ -1,40 +1,30 @@
 # Bot Troubleshooting
 
-## Registration Started But Not Capturing Entries
+## Registration Opened But Entries Not Captured
 
-Checks:
-1. registration channel id mapping still valid
-2. event record still exists
-3. runtime state restored after restart
-4. bot has message read/send permissions
+Check:
+1. correct registration channel is configured
+2. event still exists and is active
+3. bot can read/send messages in that channel
 
-## Persistent Views Not Restored
+## Slash Command Not Visible
 
-At startup, verify log line for persistent views/runtime restoration count.
-If zero unexpectedly, check state cache/persistence records.
+- allow a few minutes for sync
+- check if command is disabled in your guild scope
 
-## Slash Commands Missing or Duplicated
+## Leaderboard Values Look Wrong
 
-- sync logic can lag per guild/global scope
-- avoid multiple overlapping sync triggers
-- confirm command registration strategy per cog
+- verify rank/kills in review screen
+- confirm points formula (`position + kills`)
+- republish only after corrections
 
-## Screenshot Publish Missing Data
+## Screenshot Action Failed
 
-If rank/kill/pos appear as zero unexpectedly:
-- inspect processing output
-- verify dashboard corrections were applied
-- check publish payload mapping
+Check:
+- correct match/group selected
+- target channel still exists
+- bot permissions are valid
 
-## Integration WS Errors
+## Large Queue Output
 
-Common causes:
-- missing/deleted channel
-- stale event id referenced by dashboard command
-- command topic fired for deleted event
-
-## Queue Output Too Large
-
-Use pagination in queue commands for large servers to avoid Discord message limits.
-
-[IMG: Common bot-side error checklist]
+Use command filters or event id scope to reduce output size.

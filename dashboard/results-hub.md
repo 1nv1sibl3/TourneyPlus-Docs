@@ -1,45 +1,31 @@
 # Results Hub
 
-Results Hub is the review center for screenshot processing output.
-
 Route: `/results`
+
+Results Hub is your review screen before final leaderboard publish.
 
 ## What You Can Do
 
-- View recent submissions/jobs
-- Open per-team result review cards
-- Compare extracted rank/kills against expected values
-- Correct entries before final leaderboard publish
+- open team result cards
+- verify rank and kills
+- apply manual corrections
+- resolve conflicts before publish
 
-[IMG: Results hub list + review drawer]
+## Plan-Based Behavior
 
-## Review Card Behavior
+- **AI-enabled plan**: you review parsed values.
+- **No AI plan**: use this area for manual result entry/review where available in your flow.
 
-Review card should show:
-- Screenshot rank
-- Kill point source values
-- Conflict indicators (if any)
-- Current applied score contribution
+## What to Verify
 
-## Conflict Visibility
+- rank is correct
+- kills are correct
+- points are correct (`position + kills`)
+- no unresolved conflict highlights
 
-Use this section to detect:
-- duplicate ranks
-- unreadable/uncertain kill extraction
-- suspicious outlier values needing manual review
+## Conflict Types
 
-## Best Practice Workflow
+- Duplicate rank conflict
+- Unclear/invalid value conflict
 
-1. Filter event/group/match scope.
-2. Resolve red/orange flags first.
-3. Recheck leaderboard order after edits.
-4. Publish only when conflicts are acknowledged.
-
-## Common Causes of Misread Output
-
-- Cropped rank area
-- Low resolution screenshot
-- stylized fonts/overlays
-- incorrect or old match screenshot
-
-[VIDEO: Results hub manual correction flow]
+Always resolve or intentionally confirm conflicts before publishing.

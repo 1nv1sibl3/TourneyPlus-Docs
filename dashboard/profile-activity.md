@@ -2,44 +2,30 @@
 
 Route: `/profile`
 
-## Main Blocks
+## Main Sections
 
-- Account identity
+- Account details
 - Selected server subscription details
-- Usage activity
-- invoice/history shortcuts (if enabled)
+- Server quota activity
 
-[IMG: Profile page with subscription tracker]
+## Subscription Details
 
-## Server Subscription Details
-
-Use this section to understand:
+Use this section to check:
 - active plan
-- quota windows
-- remaining/used counters
-- scope (server vs user)
+- scope (server or user)
+- usage windows
+- used vs remaining limits
 
-## Server Quota Activity
+## Server Quota Activity Views
 
-Expected views:
-- **My Usage**: events/actions performed by the current user in selected server scope.
-- **All Users**: same server scope, all members.
+- **My Usage**: your usage in selected server
+- **All Users**: total usage by all users in selected server
 
-If activity is blank while usage exists, check tracker logging source and scope filter.
+## Readability Tips
 
-## Activity Readability Guidance
-
-Prefer plain-language labels:
+Look for three things in each entry:
 - who performed action
-- when action happened
 - what was consumed
+- when it happened
 
-Avoid overly technical raw key names in user-facing view.
-
-## Common Actions
-
-- change selected server context
-- inspect quota usage events
-- open pricing/manage subscription links
-
-[VIDEO: Profile usage walkthrough]
+If you see no activity but usage exists, re-check selected server and view mode.

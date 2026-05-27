@@ -11,29 +11,22 @@ Main sidebar sections:
 - Profile
 - Invite Bot
 
-[IMG: Dashboard sidebar full view]
+## Core Purpose
 
-## Design Goal
-
-The dashboard is your visual control panel for event lifecycle:
+Dashboard is your event control center:
 1. Create event
-2. Register teams
-3. Schedule matches
-4. Open screenshot windows
-5. Review and finalize results
-6. Publish leaderboard
+2. Open registration
+3. Schedule match(es)
+4. Collect and review results
+5. Publish leaderboard
 
-## Important Navigation Notes
+## Result Handling by Plan
 
-- **Tournaments** and **Scrims** have separate management flows.
-- **Matches** provides match-level visibility.
-- **Results Hub** is where manual corrections happen.
-- **Profile** includes server subscription details and usage activity.
+- If your plan includes AI processing, you can review parsed rank/kills from screenshot submissions.
+- If your plan does not include AI processing, enter results manually and publish normally.
 
-## Operational Rules to Remember
+## Action Safety
 
-- If a button appears locked/disabled, usually a permission, subscription, or lifecycle state is blocking the action.
-- For real-time state changes, wait for websocket sync before repeated clicking.
-- If state looks stale, use refresh action where available.
-
-[VIDEO: Event lifecycle from create to publish]
+- If a button is disabled, check permissions, plan access, or event status.
+- Do not spam click Start/Stop actions; wait for state update.
+- Use refresh when the page state appears old.

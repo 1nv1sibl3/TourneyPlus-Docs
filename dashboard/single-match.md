@@ -1,45 +1,53 @@
 # Single Match
 
-Single Match is a fast one-match event flow.
+Single Match is the fastest event flow in TourneyPlus.
 
-## Main Screens
+## Main Pages
 
 - `/matches`
 - `/matches/[id]`
 - `/matches/[id]/view`
 
-Depending on UI grouping, creation may also be launched from event manager areas.
+## Clear Step-by-Step Flow
 
-## Typical Lifecycle
+1. **Create the match**
+   - Set match name and slot count.
+   - Set registration and slot channels.
 
-1. Create single match
-2. Open registration
-3. Fill slots
-4. Open screenshot window
-5. Process and review result
-6. Publish leaderboard
+2. **Open registration**
+   - Teams register through the bot.
+   - Confirm slot list updates correctly.
 
-[IMG: Single match event card + actions]
+3. **Close registration**
+   - Lock entries before result stage.
 
-## Scoring
+4. **Open result intake**
+   - If you use screenshots, open screenshot window.
 
-Single match scoreboard should use:
-- Rank from screenshot processing
-- Position point from rank mapping
-- Kill point from extracted kills
-- Final points = position point + kill point
+5. **Fill result data**
+   - **AI-enabled plan**: review parsed rank and kills.
+   - **No AI plan**: enter rank and kills manually.
 
-If a team has no valid rank and no valid kills, keep it lower than valid submitted teams.
+6. **Check scoring rows**
+   - Rank
+   - Position Point
+   - Kill Point
+   - Total Points
 
-## Edit/Review Expectations
+7. **Resolve warnings**
+   - Red: rank conflict
+   - Orange: uncertain/incorrect value
 
-When editing result entries:
-- default values should come from processing output (not forced zero)
-- manual changes should remain explicit and traceable
+8. **Publish leaderboard**
+   - Confirm warning prompt if any flagged rows remain.
 
-## Publish and Review
+## Scoring Rule
 
-- Publish sends public leaderboard format.
-- Review request option should be available where moderation flow supports it.
+`Total Points = Position Point + Kill Point`
 
-[VIDEO: Single match result correction and publish]
+If a team has no valid rank and no valid kills, keep that team below teams with valid submitted values.
+
+## Editing Rules
+
+When opening result edit rows, values should reflect current saved values (not forced zero).
+Manual edits should be intentional and clearly visible before publish.

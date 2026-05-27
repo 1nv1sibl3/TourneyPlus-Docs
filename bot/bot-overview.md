@@ -1,40 +1,33 @@
 # Bot Overview
 
-TourneyPlus Discord bot handles real-time event operations directly inside your server.
+TourneyPlus bot runs the event flow directly in Discord.
 
-## What It Handles
+## What You Use It For
 
-- Event creation/management views (Scrim, Single Match, Tournament)
-- Registration intake and slot assignment
-- Screenshot intake and processing routing
-- Leaderboard publish/review actions
-- Profile and support commands
+- Create/manage scrims, tournaments, and single matches
+- Open/close registration
+- Track slots and teams
+- Run screenshot intake (if used in your plan)
+- Publish leaderboard updates
 
-## Primary Manager Commands
+## Main Manager Commands
 
-- `smanager` (aliases: `s`, `sm`)
-- `smmanager` (aliases: `smm`, `smg`)
-- `tourney` (aliases: `tm`, `t`)
+- `smanager` (`s`, `sm`)
+- `smmanager` (`smm`, `smg`)
+- `tourney` (`tm`, `t`)
 
 ## Utility Commands
 
-- `ssqueue` (aliases: `qqueue`, `queuejobs`)
-- `qsetup` (aliases: `setup`, `setuplogs`)
-- `qprofile` (alias: `profile`)
-- `team` command group (`rename`, `transfer`, `optout`)
+- `ssqueue` (`qqueue`, `queuejobs`)
+- `qsetup` (`setup`, `setuplogs`)
+- `qprofile` (`profile`)
+- `team` (`rename`, `transfer`, `optout`)
 
-## Support/Marketing Commands
+## Support Commands
 
-Hybrid (prefix + slash where enabled):
 - `bugreport`
 - `featurerequest`
 - `support`
 - `dashboard`
 - `policy`
 - `premium`
-
-## Demo Command
-
-- `aidemo` (restricted-channel AI demo queue)
-
-[IMG: Bot help/manager command examples]

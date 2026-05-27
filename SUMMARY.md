@@ -7,7 +7,6 @@
 * [Dashboard User Guide](dashboard-user-guide.md)
 * [Discord Bot User Guide](discord-bot-user-guide.md)
 
-
 ## Getting Started
 
 * [Overview](getting-started/overview.md)
@@ -37,21 +36,4 @@
 * [Screenshot Flow](bot/screenshot-flow.md)
 * [Team Commands](bot/team-commands.md)
 * [Support Commands](bot/support-commands.md)
-* [AI Demo Command](bot/ai-demo-command.md)
 * [Bot Troubleshooting](bot/troubleshooting-bot.md)
-
-## Admin Panel
-
-* [Admin Overview](admin/admin-overview.md)
-* [Page Map](admin/page-map.md)
-* [User Manager](admin/users.md)
-* [Server Monitor](admin/servers.md)
-* [Job Manager](admin/jobs.md)
-* [Subscription Manager & Tracker](admin/subscriptions.md)
-* [Billing & Email](admin/billing-and-email.md)
-* [Analytics](admin/analytics.md)
-
-## Appendix
-
-* [Release Checklist](appendix/release-checklist.md)
-* [Support Escalation Playbook](appendix/support-escalation-playbook.md)

@@ -1,63 +1,52 @@
 # Tournaments
 
-Tournaments support structured rounds/groups with multi-match scheduling.
+Tournaments support rounds, groups, and multi-match scoring.
 
-## Main Screens
+## Main Pages
 
-- `/tournaments` event list
-- `/tournaments/create` creation wizard
-- `/tournaments/[id]` overview
-- `/tournaments/[id]/manage` operational control panel
-
-[IMG: Tournament manager screen]
+- `/tournaments`
+- `/tournaments/create`
+- `/tournaments/[id]`
+- `/tournaments/[id]/manage`
 
 ## Create Tournament
 
-Recommended setup sequence:
-1. Tournament title
-2. Slots and group structure
-3. Required mentions
-4. Registration and confirm channels
-5. Dates/window fields used by scheduling flow
+Recommended order:
+1. Set title
+2. Set slot count and group structure
+3. Set required mentions
+4. Set registration/confirm channels
+5. Set date and schedule settings
 
-Important:
-- Keep required mentions aligned with team size policy.
-- Use clear channel mapping to avoid cross-event channel conflicts.
+## Registration
 
-## Registration Lifecycle
-
-- Start registration posts the announcement embed.
-- Stop registration closes acceptance.
-- Re-open should preserve valid registrations unless reset action is chosen.
+- Start registration to open entries.
+- Stop registration to lock entries.
+- Reopen only when needed.
 
 ## Group and Match Scheduling
 
-- Define round/group plan before opening screenshot windows.
-- Verify group split after slot fill (A/B/C should distribute correctly).
-- Avoid duplicate schedule creation for same round/group/time.
+- Schedule matches per round/group.
+- Confirm teams are distributed across groups correctly.
+- Avoid duplicate schedules for the same scope.
 
-## Screenshot Operations
+## Result Flow
 
-From manage tools, open screenshot window for target round/group/match.
-If dashboard action fails, check channel existence and permissions first.
+- Open screenshot intake for selected match.
+- Review results before publishing.
 
-## Leaderboard and Publish
+By plan:
+- **AI-enabled**: parsed values are available for review.
+- **No AI**: enter match results manually.
 
-Leaderboard supports:
-- Match-wise or combined scoring (depending on filter scope)
-- Group-based filtering
-- Publish action to Discord
-- Review request flow for moderation
+## Leaderboard
 
-Points model:
-- Position Point (from rank)
-- Kill Point (from kills)
+- Filter by group and match
+- Use combined view when needed
+- Publish to Discord after conflict check
+
+## Scoring
+
+- Position Point from rank
+- Kill Point from kills
 - Total Points = Position Point + Kill Point
-
-## Conflict and Quality Checks
-
-Before publish, verify:
-- No duplicate-rank conflicts unresolved
-- No unreadable kill entries left without manual review
-
-[VIDEO: Tournament round/group match scheduling + publish]

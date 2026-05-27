@@ -2,37 +2,32 @@
 
 ## Open Screenshot Window
 
-Operator opens screenshot window per match/group scope.
-Only valid submission window should accept screenshots.
+Open screenshot intake for the selected match/group.
+Only submissions during the open window should be counted.
 
-## Submission Intake
+## Submission
 
-- Leader/team submits screenshot in designated channel.
-- Message context links to event/match/team for processing.
+Teams submit screenshots in the configured channel.
 
-## Processing Pipeline (operator view)
+## Result Modes by Plan
 
-- Job queued
-- Worker processes rank + kills
-- Result stored and surfaced to dashboard/bot tools
+- **AI-enabled plan**
+  - rank/kills are parsed automatically
+  - you review and confirm in dashboard/bot flow
+
+- **No AI plan**
+  - use screenshot channel only as proof/log if needed
+  - enter rank/kills manually before publish
 
 ## Publish Output
 
-Public leaderboard formatting should include readable fields:
-- slot/team
+Leaderboard publish should show:
+- team/slot
 - rank
 - position point
 - kill point
 - total points
 
-## Review Action
+## Conflict Check
 
-If supported in event mode, review button/request path should be visible.
-
-## Data Quality Notes
-
-- Duplicate rank conflicts can occur.
-- Unreadable kills/ranks require manual correction.
-- Use results hub before final publish when uncertain.
-
-[VIDEO: Screenshot window to published leaderboard]
+Always resolve highlighted conflicts before publishing.

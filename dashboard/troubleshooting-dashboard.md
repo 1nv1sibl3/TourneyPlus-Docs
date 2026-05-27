@@ -1,45 +1,34 @@
 # Dashboard Troubleshooting
 
-## Event Not Refreshing After Action
+## Event Action Did Not Update
 
-Checks:
-1. Wait for websocket confirmation/state update.
-2. Manual refresh page.
-3. Verify bot integration websocket is connected.
+- refresh the page
+- wait a few seconds and retry once
+- confirm you are in the right server/event context
 
-## Registration Open/Close Button Misbehavior
+## Registration Button Feels Stuck
 
-- Avoid double clicks/spam.
-- Confirm action success before next action.
-- Check if event is suspended/banned (admin policies).
+- avoid double-clicking start/stop
+- wait for button state to change before the next action
 
-## Screenshot Window Open Fails
+## Screenshot Window Failed to Open
 
-Common causes:
-- target channel missing/deleted
-- permission mismatch
-- duplicated schedule records with wrong match mapping
+Check:
+- target channel still exists
+- bot has send/read/embed permissions in that channel
+- selected match/group is correct
 
-## Leaderboard Looks Wrong
+## Leaderboard Looks Incorrect
 
-- Confirm points formula is applied (position + kills).
-- Check conflict highlights.
-- Reopen results hub and verify raw extracted values.
+- verify scoring formula (`position + kills`)
+- check row conflict highlights
+- re-open result editor and confirm values
 
-## Queue/Processing Looks Stuck
+## No Quota Activity on Profile
 
-- Review Job Manager status filters.
-- Check worker heartbeat/retry state.
-- verify job not permanently failed due source screenshot issue.
-
-## Profile Usage Activity Empty
-
-- confirm server context selection
-- check whether events are usage-logged source vs derived snapshot only
-- validate filter mode (My Usage / All Users)
+- verify selected server
+- switch between “My Usage” and “All Users”
 
 ## Deletion Side Effects
 
-If shared channels were reused across events, deletion behavior should preserve registration/slotlist channels as per latest policy.
-
-[IMG: Common error checklist card]
+If multiple events used shared channels, confirm channel assignments before deleting an event.

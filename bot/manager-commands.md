@@ -2,17 +2,15 @@
 
 ## `smanager`
 
-Purpose: open scrim manager interface.
+Opens scrim manager UI.
 
 Usage:
 - `smanager`
 - `sm`
 
-Requires event manager access + permissions.
-
 ## `smmanager`
 
-Purpose: create/manage Single Match events.
+Opens single-match manager UI.
 
 Usage:
 - `smmanager`
@@ -20,7 +18,7 @@ Usage:
 
 ## `tourney`
 
-Purpose: create/manage tournaments.
+Opens tournament manager UI.
 
 Usage:
 - `tourney`
@@ -28,19 +26,15 @@ Usage:
 
 ## `ssqueue`
 
-Purpose: view screenshot queue and processing health.
+Shows screenshot/result queue status for events.
 
 Usage:
 - `ssqueue`
 - `ssqueue <event_metadata_id>`
 
-Notes:
-- should support pagination for large outputs
-- event-level and global queue stats are both relevant
-
 ## `qsetup`
 
-Purpose: repair/setup logs and mod roles.
+Repairs setup channels/roles.
 
 Usage examples:
 - `qsetup`
@@ -49,10 +43,8 @@ Usage examples:
 
 ## `qprofile`
 
-Purpose: show player profile + usage stats.
+Shows a player profile summary.
 
 Usage:
 - `qprofile`
 - `qprofile @user`
-
-[VIDEO: manager command quick tour]

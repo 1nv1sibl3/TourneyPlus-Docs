@@ -1,63 +1,57 @@
 # Scrims
 
-Scrims are tier-driven recurring style events.
+Scrims are tier-based events for repeated competitive sessions.
 
-## Main Screens
+## Main Pages
 
-- `/scrims` list and quick actions
-- `/scrims/config` creation + advanced configuration
-- `/scrims/[id]` event management
-- `/scrims/[id]/leaderboard` standings and publish
-- `/scrims/[id]/view` summary/detail
-
-[IMG: Scrim list with status cards]
+- `/scrims`
+- `/scrims/config`
+- `/scrims/[id]`
+- `/scrims/[id]/view`
+- `/scrims/[id]/leaderboard`
 
 ## Create Scrim
 
-Typical inputs:
+Typical setup fields:
 - Name
-- Tier preset / slots
-- Registration and slotlist channels
+- Tier preset / slot count
+- Registration channel
+- Slot list channel
 - Required mentions
-- Auto-shuffle setting
-- Advanced toggles
+- Auto-shuffle (ON/OFF)
 
-Notes:
-- If auto-shuffle is OFF, no next-shuffle card should appear.
-- Multi-register options may be restricted in advanced flow depending on latest UI changes.
+If auto-shuffle is OFF, no “next shuffle” reminder card should appear.
 
 ## Registration Controls
 
 - Start registration
 - Stop registration
-- Preserve/reopen behavior depending on state
+- Reopen registration when needed
 
-Best practice:
-- Avoid spam-clicking open/close; wait for success response and button state flip.
+## Slot and Group Checks
 
-## Slot and Group Handling
+- Slot count should reduce as valid teams register.
+- Reserved slots and normal registrations are different.
+- Group split should match configured structure.
 
-- Slot counts should decrease as valid teams register.
-- Reserved slots are tracked separately and should not be confused with fully validated registrations.
-- Group distribution should remain consistent with configured structure.
+## Result Flow
 
-## Screenshot and Results Flow
+- Open screenshot window when match starts.
+- Teams submit in the configured channel.
 
-- Open screenshot window per match/group.
-- Teams submit screenshots in designated channel.
-- Processing updates leaderboard with rank, kill points, position points, and total points.
+Then:
+- **AI-enabled plan**: review parsed result and confirm.
+- **No AI plan**: enter results manually.
 
-## Leaderboard Terms (current wording)
+## Leaderboard Terms
 
-- **Kill Point**
-- **Position Point**
-- **Rank**
-- **Points = Kill Point + Position Point**
+- Kill Point
+- Position Point
+- Rank
+- Total Points (`Kill Point + Position Point`)
 
-## Conflict Handling
+## Conflict Warnings
 
-- Duplicate rank conflict can be highlighted.
-- Uncertain kill extraction can be highlighted.
-- Publishing should show warning when unresolved flags exist.
-
-[VIDEO: Scrim full flow from config to leaderboard publish]
+- Duplicate rank: highlighted as conflict.
+- Unclear kills/rank: highlighted for review.
+- Publish asks confirmation if unresolved warnings exist.

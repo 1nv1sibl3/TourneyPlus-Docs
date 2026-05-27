@@ -1,36 +1,27 @@
 # Setup & Permissions
 
-## Initial Setup
+## First Setup
 
 Run:
 - `qsetup`
 
-This repairs/creates default log channels + moderator roles for scrim/tournament/single-match flows.
+This creates/repairs required log channels and event moderator roles.
 
-## Permission Baseline
+## Bot Permissions
 
-Bot should have:
+Recommended bot permissions:
 - Manage Channels
 - Manage Roles
 - Manage Messages
-- Send Messages / Embed Links
+- Send Messages
+- Embed Links
 
-## Moderator Access
+## Who Can Run Manager Commands
 
-Typical checks:
-- `Manage Server` OR
-- event-specific mod role (`scrims-mod`, `tourney-mod`, `single-match-mod`)
+Usually:
+- users with `Manage Server`, or
+- users with event manager role (`scrims-mod`, `tourney-mod`, `single-match-mod`)
 
-## Subscription Enforcement
+## Why Actions May Be Blocked
 
-Even with permissions, actions may be blocked if subscription feature access denies Discord-side event management.
-
-## Persistent Runtime State
-
-After bot restart, registration/runtime state should restore. Startup log should confirm persistent views/state count.
-
-## Role Upgrade/Downgrade Messaging
-
-When organizer roles are granted/revoked, users receive announcement-style messages tagging the affected user.
-
-[IMG: qsetup success embed]
+Even with Discord permissions, some actions can be blocked if current plan does not allow that feature.

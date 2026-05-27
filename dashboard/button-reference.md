@@ -1,66 +1,52 @@
-# Dashboard Button Reference
+# Button Reference
 
-This page is a practical reference for commonly used buttons across event flows.
-Button labels may vary slightly by page/version.
+Button labels can vary slightly by screen/version.
 
-## Global
+## Common Buttons
 
-| Button | Where | What it does |
-|---|---|---|
-| Refresh | list/leaderboard/results views | refetches latest server data |
-| Filters | list/leaderboard/results | narrows scope (group, match, status, etc.) |
-| Save / Update | edit forms | persists changed settings |
-| Delete | event cards/manage pages | removes event resources per deletion policy |
+| Button | What it does |
+|---|---|
+| Refresh | reloads latest data |
+| Filter | narrows list by group/match/status |
+| Save / Update | applies your edits |
+| Delete | deletes event by current policy |
 
-## Scrim
+## Scrim Buttons
 
 | Button | Effect |
 |---|---|
-| Create Scrim | creates new scrim with selected preset/config |
-| Start Registration | opens registrations and posts registration message |
-| Stop Registration | closes registrations |
-| Open Screenshots | opens screenshot submission window |
-| Close Screenshots | closes screenshot submission window |
-| Shuffle / Auto Shuffle | distributes teams/slots based on active config |
-| Reset Scores | clears current round scoring state |
-| Publish Leaderboard | sends formatted leaderboard to Discord |
-| Request Review | flags published output for review workflow |
+| Create Scrim | creates a new scrim |
+| Start Registration | opens team registration |
+| Stop Registration | closes registration |
+| Open Screenshots | accepts screenshot submissions |
+| Close Screenshots | closes screenshot intake |
+| Shuffle / Auto Shuffle | organizes teams into target groups/slots |
+| Reset Scores | resets current score set |
+| Publish Leaderboard | sends leaderboard to Discord |
 
-## Tournament
+## Tournament Buttons
 
 | Button | Effect |
 |---|---|
-| Create Tournament | creates tournament + base setup |
+| Create Tournament | creates tournament setup |
 | Start Registration | opens tournament registration |
 | Stop Registration | closes tournament registration |
-| Schedule Match | creates match schedule entry for round/group |
-| Open Screenshots | opens submission window for selected schedule |
-| Group Tools | manage group-scoped operations |
-| Leaderboard | opens ranking view with filters |
-| Publish Leaderboard | sends public leaderboard |
+| Schedule Match | adds round/group match schedule |
+| Open Screenshots | opens intake for selected schedule |
+| Leaderboard | opens ranking view |
+| Publish Leaderboard | posts leaderboard to Discord |
 
-## Single Match
+## Single Match Buttons
 
 | Button | Effect |
 |---|---|
 | Create Match | creates single match event |
 | Start Registration | opens registration |
 | Stop Registration | closes registration |
-| Open Screenshots | opens submission window |
-| Results Review | opens editable processed output |
+| Open Screenshots | opens intake window |
+| Review Results | opens editable result rows |
 | Publish Leaderboard | sends final leaderboard |
 
-## Results Hub
+## Warning Prompt
 
-| Button | Effect |
-|---|---|
-| Review | opens full result card/editor |
-| Apply | saves manual correction |
-| Retry Processing | requeues result if supported |
-| Mark Needs Review | flags entry for manual follow-up |
-
-## Publish Warnings
-
-When conflict highlights exist (red/orange), publish prompts confirmation before sending.
-
-[IMG: Button map cheatsheet]
+If conflict highlights exist, publish action asks for confirmation.

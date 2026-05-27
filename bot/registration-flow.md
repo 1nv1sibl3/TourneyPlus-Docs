@@ -2,37 +2,26 @@
 
 ## Open Registration
 
-From manager UI, open registration for the selected event.
-Bot posts registration embed in configured channel.
+Open registration from event manager UI.
+The bot posts registration instructions in your configured channel.
 
-## User Registration
+## Team Submission
 
-Users submit tags/format per event rule.
-Validation typically checks:
-- mention count
-- duplicate rules
-- member eligibility
-- IGN/profile completeness rules
+Teams register using the format required by your event settings.
+Validation checks can include:
+- required mentions
+- duplicate entry rules
+- profile/IGN completeness
 
-## Missing IGN Path
+## Missing IGN Handling
 
-If member IGN is missing:
-- member gets DM prompt to update profile
-- registration remains pending/incomplete
-- once all required profiles are complete, status auto-updates
+If required IGN details are missing, the player can receive a DM prompt to complete profile data.
+Registration status updates after required details are completed.
 
-## Slot List Updates
+## Slot List Behavior
 
-Slot list should reflect real-time occupied/available counts, including reopen cases.
+Slot list should update as teams are accepted, rejected, or withdrawn.
 
 ## Close Registration
 
-Closing registration stops new intake and finalizes current slot list.
-
-## Important Edge Cases
-
-- shared registration channels across events should be handled carefully
-- deletion flow should not unintentionally destroy another active event
-- registration state should survive restart (persistent runtime state)
-
-[IMG: Registration embed + slot list example]
+Close registration when slot filling is complete.
