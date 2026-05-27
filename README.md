@@ -2,13 +2,38 @@
 
 Last updated: May 27, 2026
 
-This repository contains client-facing documentation for both TourneyPlus products:
+This documentation is written for organizers, moderators, server owners, and clients using TourneyPlus.
 
-- Discord bot usage guide: [`discord-bot-user-guide.md`](./discord-bot-user-guide.md)
-- Dashboard usage guide: [`dashboard-user-guide.md`](./dashboard-user-guide.md)
+It covers:
+- Discord bot workflows
+- Dashboard workflows
+- Admin panel workflows
+- Common troubleshooting and operational checks
 
-Scope notes:
+It intentionally avoids backend internals and source code details.
 
-- These guides are written for users, staff, and clients.
-- They explain what each feature/button does from the user point of view.
-- They intentionally avoid backend/core implementation details.
+
+## Quick Guides
+
+- [Dashboard User Guide](dashboard-user-guide.md)
+- [Discord Bot User Guide](discord-bot-user-guide.md)
+
+## Start Here
+
+- [Getting Started](getting-started/overview.md)
+- [Dashboard Guide](dashboard/dashboard-overview.md)
+- [Discord Bot Guide](bot/bot-overview.md)
+- [Admin Guide](admin/admin-overview.md)
+- [Glossary](getting-started/glossary.md)
+
+## Product Scope
+
+TourneyPlus currently supports the BGMI flow end-to-end. Game switch compatibility is being prepared for future expansion.
+
+## Media Placeholders
+
+You will see markers like:
+- `[IMG: ...]`
+- `[VIDEO: ...]`
+
+Replace those with screenshots or short clips as you build your public-facing docs.

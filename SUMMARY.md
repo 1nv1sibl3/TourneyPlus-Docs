@@ -1,0 +1,57 @@
+# Table of contents
+
+* [TourneyPlus Documentation](README.md)
+
+## Quick Guides
+
+* [Dashboard User Guide](dashboard-user-guide.md)
+* [Discord Bot User Guide](discord-bot-user-guide.md)
+
+
+## Getting Started
+
+* [Overview](getting-started/overview.md)
+* [Glossary](getting-started/glossary.md)
+
+## Dashboard
+
+* [Dashboard Overview](dashboard/dashboard-overview.md)
+* [Page Map](dashboard/page-map.md)
+* [Quick Start](dashboard/quick-start.md)
+* [Button Reference](dashboard/button-reference.md)
+* [Scrims](dashboard/scrims.md)
+* [Tournaments](dashboard/tournaments.md)
+* [Single Match](dashboard/single-match.md)
+* [Results Hub](dashboard/results-hub.md)
+* [Leaderboard Behavior](dashboard/leaderboard.md)
+* [Profile & Activity](dashboard/profile-activity.md)
+* [Pricing & Checkout](dashboard/pricing-checkout.md)
+* [Dashboard Troubleshooting](dashboard/troubleshooting-dashboard.md)
+
+## Discord Bot
+
+* [Bot Overview](bot/bot-overview.md)
+* [Setup & Permissions](bot/setup-and-permissions.md)
+* [Manager Commands](bot/manager-commands.md)
+* [Registration Flow](bot/registration-flow.md)
+* [Screenshot Flow](bot/screenshot-flow.md)
+* [Team Commands](bot/team-commands.md)
+* [Support Commands](bot/support-commands.md)
+* [AI Demo Command](bot/ai-demo-command.md)
+* [Bot Troubleshooting](bot/troubleshooting-bot.md)
+
+## Admin Panel
+
+* [Admin Overview](admin/admin-overview.md)
+* [Page Map](admin/page-map.md)
+* [User Manager](admin/users.md)
+* [Server Monitor](admin/servers.md)
+* [Job Manager](admin/jobs.md)
+* [Subscription Manager & Tracker](admin/subscriptions.md)
+* [Billing & Email](admin/billing-and-email.md)
+* [Analytics](admin/analytics.md)
+
+## Appendix
+
+* [Release Checklist](appendix/release-checklist.md)
+* [Support Escalation Playbook](appendix/support-escalation-playbook.md)
