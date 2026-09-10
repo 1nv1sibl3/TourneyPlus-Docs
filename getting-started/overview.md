@@ -1,40 +1,53 @@
 # Overview
 
-This guide explains how organizers use TourneyPlus day-to-day.
+TourneyPlus is an esports management platform for Discord servers. It runs your events end to end — registration, slot management, group creation, match scheduling, result collection, and leaderboards — and pairs with a web dashboard for billing, plan management, and advanced operations.
 
-## What You Can Run
+<!-- screenshot: landing-page-hero -->
 
-- Scrim events
-- Tournament events
-- Single Match events
+## The four event types
 
-## Standard Organizer Flow
+| Event type | What it is | When to use it |
+| --- | --- | --- |
+| **Scrim** | A recurring, tier-based practice league. Teams register weekly, get placed into tier groups (T1–T5), and move up or down based on weekly results. | Regular daily/weekly practice for a community. |
+| **Tournament** | A multi-round competitive event. Teams register once, are split into groups per round, and only advancing teams continue to the next round. | Structured competition with a final winner. |
+| **Single Match** | One match, one round, one group. The fastest end-to-end flow. | One-off matches, tryouts, showmatches. |
+| **Daily Scrim** | A scrim that resets every day. Per-day rosters are snapshotted, and leaderboards are per-day. | Communities that run fresh scrims daily without weekly tier logic. |
 
-1. Invite bot and finish setup in Discord.
-2. Login to dashboard and pick your server.
-3. Create event and open registration.
-4. Fill slots and schedule match(es).
-5. Collect results.
-6. Publish leaderboard.
+All four share the same lifecycle pattern: **create → open registration → fill slots → close registration → run matches → collect results → publish leaderboard**. The differences are in grouping, rounds, and reset behavior.
 
-## Result Modes (Important)
+## Who uses TourneyPlus
 
-Result handling depends on plan access:
+- **Server owners / administrators** — set up the bot, manage subscriptions, configure premium branding.
+- **Event managers** — create events, control registration, moderate teams, publish results. Identified by the `Manage Server` permission or one of the mod roles below.
+- **Moderators** — help run events under a scoped mod role.
+- **Team leaders** — register teams, rename teams, transfer leadership, submit screenshots.
+- **Players** — maintain a profile, join teams, view stats.
 
-- **AI-enabled plan**
-  - Open screenshot window.
-  - Teams submit screenshots.
-  - Review extracted rank/kills in dashboard.
-  - Publish leaderboard.
+## Mod roles created by setup
 
-- **No AI in plan**
-  - Run registration and match scheduling normally.
-  - Enter results manually in leaderboard/review screens.
-  - Publish leaderboard manually.
+Running `/setup` creates four private log channels and four moderator roles:
 
-## Who This Guide Is For
+| Event type | Mod role | Log channel |
+| --- | --- | --- |
+| Scrim | `scrims-mod` | `tourneyplus-scrims-logs` |
+| Tournament | `tourney-mod` | `tourneyplus-tourney-logs` |
+| Single Match | `single-match-mod` | `tourneyplus-single-match-logs` |
+| Daily Scrim | `daily-scrims-mod` | `tourneyplus-daily-scrims-logs` |
 
-- Server owners
-- Event managers
-- Moderators
-- Tournament/scrim operators
+Members with `Manage Server` can always do everything a mod role allows. See [Setup & Permissions](bot/setup-and-permissions.md).
+
+## How Discord and the dashboard work together
+
+- Most event operations are available **both** in Discord (via manager panels and commands) and on the **web dashboard**.
+- The two surfaces synchronize in real time. If an action seems stuck, allow a few seconds and refresh.
+- Billing, plan purchases, quota views, and data exports are dashboard-only. In-channel registration and screenshot submission are Discord-only.
+
+## Games supported
+
+TourneyPlus currently supports **BGMI, FREEFIRE, VALORANT, and CS2**. Events and forms are tagged with a game, and the dashboard has a global game filter. Note that the rank-based placement points (see [Leaderboards](bot/leaderboards.md)) apply to battle-royale games (BGMI, FREEFIRE); non-battle-royale games (VALORANT, CS2) score kills only.
+
+## Next steps
+
+- Install the bot and run setup: [Setup & Permissions](bot/setup-and-permissions.md)
+- Run your first event: [Quickstart](quickstart.md)
+- Understand the vocabulary: [Glossary](glossary.md)

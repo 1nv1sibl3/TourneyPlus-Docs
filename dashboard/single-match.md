@@ -1,53 +1,39 @@
-# Single Match
+# Dashboard: Single Match
 
-Single Match is the fastest event flow in TourneyPlus.
+Managing single-match events from the web. The pages are `/matches` (the single-match lobby list) and `/matches/[id]` (detail). Requires `single-match-mod`, `scrims-mod`, or Discord Manage Server on the selected server.
 
-## Main Pages
+<!-- screenshot: dashboard-matches-list -->
 
-- `/matches`
-- `/matches/[id]`
-- `/matches/[id]/view`
+## The matches list
 
-## Clear Step-by-Step Flow
+Cards per single match showing state, slot fill, match time, and map (with per-map styling). Actions: open the detail page, delete (with confirmation). A search/filter bar narrows by state and name. **Create Match** opens a modal to configure a new single match: name, slots, channels, role, required mentions, open time, and game.
 
-1. **Create the match**
-   - Set match name and slot count.
-   - Set registration and slot channels.
+## The match detail page
 
-2. **Open registration**
-   - Teams register through the bot.
-   - Confirm slot list updates correctly.
+The same management surface as scrims, scoped to the single match:
 
-3. **Close registration**
-   - Lock entries before result stage.
+- **Teams** — registered teams, slot numbers, statuses; kick, ban, manual add.
+- **Group** — the single group's role/channel status; resync, send slotlist, send ID pass, open/close screenshot windows.
+- **Screenshots** — submissions for the match; create/edit/delete and organizer uploads.
+- **Standings** — the single-round standings and publish.
 
-4. **Open result intake**
-   - If you use screenshots, open screenshot window.
+Because a single match has exactly one round and one group, there are no round selectors or shuffle controls — the flow is linear: register → collect → publish.
 
-5. **Fill result data**
-   - **AI-enabled plan**: review parsed rank and kills.
-   - **No AI plan**: enter rank and kills manually.
+## Scheduling the match
 
-6. **Check scoring rows**
-   - Rank
-   - Position Point
-   - Kill Point
-   - Total Points
+From the detail page, set the match's start time, map, and room details; they feed the ID pass posted to the group channel. Times are IST.
 
-7. **Resolve warnings**
-   - Red: rank conflict
-   - Orange: uncertain/incorrect value
+## Result entry
 
-8. **Publish leaderboard**
-   - Confirm warning prompt if any flagged rows remain.
+Both AI and manual flows are supported:
 
-## Scoring Rule
+- **AI** — open the screenshot window, let leaders submit in Discord, then process submissions; parsed rank/kills arrive as results.
+- **Manual** — open the result rows and type rank and kills per team; or upload organizer-held screenshots and enter values from them.
 
-`Total Points = Position Point + Kill Point`
+Either way, publish the leaderboard when the values look right. Null kills count as 0 and never block publishing.
 
-If a team has no valid rank and no valid kills, keep that team below teams with valid submitted values.
+## Notes
 
-## Editing Rules
-
-When opening result edit rows, values should reflect current saved values (not forced zero).
-Manual edits should be intentional and clearly visible before publish.
+- Single-match creation consumes the plan's single-match quota (`event.single_match.create.daily`) and respects total/slot capacity limits.
+- Deleting a single match removes its slots and registrations; player stats persist.
+- Multiple single matches can run concurrently, quota permitting.

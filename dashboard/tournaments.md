@@ -1,52 +1,55 @@
-# Tournaments
+# Dashboard: Tournaments
 
-Tournaments support rounds, groups, and multi-match scoring.
+Managing tournaments from the web: creation with the round-plan builder, registration, rounds and groups, shuffle, and leaderboards. The page pair is `/tournaments` (list) and `/tournaments/[id]` + `/tournaments/[id]/manage` (detail/management).
 
-## Main Pages
+Requires the `tourney-mod` role or Discord Manage Server on the selected server.
 
-- `/tournaments`
-- `/tournaments/create`
-- `/tournaments/[id]`
-- `/tournaments/[id]/manage`
+<!-- screenshot: dashboard-tournaments-list -->
 
-## Create Tournament
+## Creating a tournament (`/tournaments/create`)
 
-Recommended order:
-1. Set title
-2. Set slot count and group structure
-3. Set required mentions
-4. Set registration/confirm channels
-5. Set date and schedule settings
+A tabbed wizard:
+
+| Tab | Fields |
+| --- | --- |
+| **Basic details** | Name, description, game, registration channel, confirm channel, success role, required mentions, total slots, teams per group, reserve slots, entry fee, prize pool |
+| **Round plan** | Per round: matches per group, advancing teams per group, with a live preview of the resolved structure (group counts per round, team counts, channel caps) |
+| **Rules** | Duplicate rules, autodelete rejected, DM verification, registration type, open role, success message |
+
+The round-plan preview warns about edge cases (groups that can't divide evenly) and enforces the **250 group-channel cap**. Dates entered are interpreted as IST.
+
+Free servers can keep only one tournament active; the create flow gates additional ones.
+
+<!-- screenshot: dashboard-tournament-create-rounds -->
+
+## The tournament detail page
+
+- **Overview** — slots, groups, rounds, timeline.
+- **Registrations** — the teams table with statuses; manual add, kick, ban.
+- **Groups** — per-round group management: sync, recreate, role/channel status per group.
+- **Rounds** — round progress, per-round leaderboards, and the **round shuffle** action.
+- **Leaderboard** — standings with publish controls (embed or image format).
 
 ## Registration
 
-- Start registration to open entries.
-- Stop registration to lock entries.
-- Reopen only when needed.
+**Start/Pause registration** relays to Discord. All the registration validation described in [Registration Flow](../bot/registration-flow.md) applies to messages captured by the bot; dashboard-created registrations bypass message validation but follow the slot pipeline.
 
-## Group and Match Scheduling
+## Rounds and groups workflow
 
-- Schedule matches per round/group.
-- Confirm teams are distributed across groups correctly.
-- Avoid duplicate schedules for the same scope.
+1. Close registration.
+2. **Sync groups** for Round 1 — roles and channels are created in Discord.
+3. Per group: send slotlist, send ID pass, open screenshot windows, schedule matches.
+4. Collect results (screenshots processed by OCR, or manual entry).
+5. Publish the round leaderboard.
+6. **Round shuffle** — the preview shows promoted/eliminated counts per group, warns on incomplete matches, and asks whether to keep old round channels for history.
+7. Repeat for the next round.
 
-## Result Flow
+The same **Sync Warning** you see in Discord (registrations ahead of group infrastructure) appears here when rounds need recreating.
 
-- Open screenshot intake for selected match.
-- Review results before publishing.
+## Leaderboards
 
-By plan:
-- **AI-enabled**: parsed values are available for review.
-- **No AI**: enter match results manually.
+The tournament leaderboard page computes standings for a chosen scope (round, group, match) and lets you publish to Discord in embed or image form. Manual adjustments are applied the same way as from the Discord group tools. See [Leaderboards & Point Tables](leaderboard.md).
 
-## Leaderboard
+## Public tournament view
 
-- Filter by group and match
-- Use combined view when needed
-- Publish to Discord after conflict check
-
-## Scoring
-
-- Position Point from rank
-- Kill Point from kills
-- Total Points = Position Point + Kill Point
+Tournaments can have a public page at `/public/tournaments/[id]` for sharing brackets and standings outside Discord.

@@ -1,34 +1,54 @@
 # Support Commands
 
-## `bugreport` (`report`, `bug`)
+Quick-reference for TourneyPlus's user-facing support commands. All of them work as slash commands and with the prefix.
 
-Opens bug report form and submits details to support channel.
+## `/bugreport`
 
-## `featurerequest` (`feature`, `request`)
+Aliases: `report`, `bug`.
 
-Opens feature request form and submits details to support channel.
+Opens a button, then a form with fields: Bug Title, What Happened, Steps to Reproduce, Expected Result, and optional Subscription Details. On submit, the report is delivered to the TourneyPlus team's internal bug-report channel and you get:
 
-## `support` (`community`)
+> Thanks. Your bug report has been submitted to the TourneyPlus team.
 
-Shares official TourneyPlus support server invite.
+## `/featurerequest`
 
-## `dashboard` (`link`)
+Aliases: `feature`, `request`.
 
-Shares dashboard link.
+Same flow with fields: Feature Title, What Problem Does This Solve, Requested Solution, Impact / Priority, and optional Extra Context. Delivered to the feature-request channel.
 
-## `policy` (`policies`)
+## `/support`
 
-Shares policy links:
-- Terms
-- Privacy
-- Guidelines
-- License
-- Shipping
-- Cancellation
-- Refund
+Aliases: `community`.
 
-## `premium`
+Posts the official TourneyPlus support server invite. Join it for live help from the team and community.
 
-Shares pricing page link.
+## `/dashboard`
 
-Prefix aliases may include `pricing` and `plans`.
+Aliases: `link`.
+
+Posts the dashboard URL: `https://tourneyplus.xyz/dashboard`.
+
+## `/policy`
+
+Aliases: `policies`.
+
+Posts links to the policy documents: Terms, Privacy, Guidelines, Licenses, Shipping & Delivery, Cancellation, Refund.
+
+## `/premium`
+
+Aliases: `pricing`, `plans`.
+
+Run in a server: shows that server's active plan — plan name, status (Trial/Active), auto-renew, start and end dates (lifetime plans show "Never (lifetime)"), with a link to the pricing page. Run in DMs: general pricing links.
+
+## Other useful commands
+
+| Command | Purpose |
+| --- | --- |
+| `/ping` | Gateway and database latency |
+| `/uptime` | Bot uptime |
+| `/stats` | Bot, shard, system, and usage statistics (server-only) |
+| `/help` | Command help; `/help <command>` for details on one command |
+
+## When your message can't be posted
+
+If the bot lacks **Send Messages** or **Embed Links** in the channel, support commands fall back to a plain-text notice (or a DM) telling you which permission is missing, rather than failing silently.
