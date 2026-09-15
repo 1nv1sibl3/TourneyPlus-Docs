@@ -64,6 +64,16 @@ How they're used:
 - Templates are reusable across events; each server typically maintains one or two.
 - If no template is chosen, leaderboards publish as standard embeds.
 
+## Conflict check
+
+Before publishing, the leaderboard page runs an automatic conflict check and shows a summary panel:
+
+- **Duplicate ranks** are marked **red** — two teams can't share a placement.
+- **Kill mismatches** are marked **orange** — a team's kill total differs from the sum of its players' kills (usually a partially processed screenshot or a manual edit that missed a player).
+- Rank-only oddities (everything else) stay neutral — only genuine conflicts are highlighted.
+
+Publishing with conflicts asks for confirmation and shows the counts (*"Conflicts detected (N duplicate-rank, M kill-mismatch). Publish anyway?"*). Conflicts never block publishing; they're a prompt to double-check first.
+
 ## Review requests
 
 Players can press **Request Review** on any published leaderboard. The request (with top-team snapshot and message link) is posted to the event's log channel with a mod-role ping. Reviews do not modify the leaderboard; organizers correct results and republish.

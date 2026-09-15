@@ -24,8 +24,8 @@ Everything you can do with the TourneyPlus web dashboard at `https://tourneyplus
 
 ## Account & billing
 
-- [Profile & Activity](dashboard/profile-activity.md)
-- [Pricing & Checkout](dashboard/pricing-checkout.md)
+- [Profile & Activity](dashboard/profile-activity.md) — organizer stats, achievements, quota usage
+- [Pricing & Checkout](dashboard/pricing-checkout.md) — the Billing page, plans, and checkout
 - [Plans, Scopes & Entitlements](subscriptions/plans-and-scopes.md)
 - [Quotas & Usage](subscriptions/quotas-and-usage.md)
 - [Coupons & Redeem Codes](subscriptions/coupons.md)

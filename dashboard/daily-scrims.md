@@ -6,7 +6,21 @@ Managing daily scrims from the web at `/daily-scrims`. Requires `daily-scrims-mo
 
 ## The daily scrims list
 
-Cards per daily scrim showing its state (open / closed / disabled) and slot fill. Actions: open the detail page, delete (with confirmation — removes the event with its slots, reservations, and bans).
+Cards per daily scrim showing its state (open / closed / disabled) and slot fill. Actions: open the detail page, delete (with confirmation — removes the event with its slots, reservations, and bans), and **Create Daily Scrim** to start the creation wizard.
+
+## Creating a daily scrim (`/daily-scrims/create`)
+
+The wizard collects:
+
+| Step | Fields |
+| --- | --- |
+| Channels & roles | Name, registration channel, slotlist channel, success role, public slot-manager channel (optional), ban-log channel (optional), ping role, registration-open role |
+| Registration | Team size, total slots, teams per group, matches per group per day, first open date and daily open time (IST), registration mode and reg-open embed style |
+| Match lock & autoclean | Daily match-lock time (IST) and autoclean schedule |
+| Advanced | Extra organizer options |
+| Review | Summary before creating |
+
+All times are IST, matching the bot's daily-reset schedule.
 
 ## The detail page
 

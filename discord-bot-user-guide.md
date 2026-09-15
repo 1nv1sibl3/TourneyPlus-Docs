@@ -16,14 +16,14 @@ Everything you can do with the TourneyPlus bot inside Discord. Every command wor
 
 ## Core workflows
 
-- [Registration Flow](bot/registration-flow.md) — how teams get in (tags, profiles, holds, DM verification)
+- [Registration Flow](bot/registration-flow.md) — how teams get in (tags, profiles, custom forms, holds, DM verification)
 - [Screenshot Flow & Results](bot/screenshot-flow.md) — screenshot windows, AI processing, manual results
 - [Leaderboards](bot/leaderboards.md) — scoring, scopes, publishing
 
 ## Players
 
-- [Team Commands](bot/team-commands.md) — `/team` rename / transfer / optout
-- [Profile & Stats](bot/profile-and-stats.md) — `/profile` and lifetime stats
+- [Team Commands](bot/team-commands.md) — the `/team` card: history, rename / transfer / opt out
+- [Profile & Stats](bot/profile-and-stats.md) — `/profile`, per-game identities, achievements, lifetime stats
 
 ## Reference
 

@@ -49,16 +49,16 @@ A denial message always names what's missing and where to upgrade.
 
 ## Trials
 
-Trial plans are assignments with `is_trial` and a limited window. They can be constrained **once per user** or **once per server**. Trials behave like active plans for entitlements and quotas.
+Trial plans are time-limited plan assignments with a limited window. They can be constrained **once per user** or **once per server**. Trials behave like active plans for entitlements and quotas.
 
 ## Enforcement modes
 
-Enforcement can be `strict` (default — gates active) or `off` (platform-wide bypass, used during incidents). When enforcement is off you may see actions succeed that would normally be gated; usage is still recorded.
+Enforcement is active by default. During platform incidents support may temporarily relax gating — you may see actions succeed that would normally be gated; usage is still recorded.
 
 ## Where to check your plan
 
 - **Discord:** `/premium` shows the selected server's active plan, status, auto-renew, and window.
-- **Dashboard:** `/profile` shows assignments, windows, and the server's active plan summary.
+- **Dashboard:** `/profile` shows assignments, windows, and the server's active plan summary; `/billing` adds your subscribed servers, quota usage, and transaction history.
 
 ## Buying and renewing
 

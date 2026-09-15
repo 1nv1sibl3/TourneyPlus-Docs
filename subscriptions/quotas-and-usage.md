@@ -48,6 +48,8 @@ On the dashboard **Profile** page (`/profile`):
 - **Per-server summary** — the selected server's active plan and quota rows: period, window start/end, limit, used, remaining.
 - **Quota events** — the consumption log: who performed each action, what was consumed, and when.
 
+The [Billing page](../dashboard/pricing-checkout.md#the-billing-page) shows the same per-server quota usage alongside your subscribed servers and transactions.
+
 Usage rows are per-server-scoped; switch the top-bar server selector to see another server's usage.
 
 ## Reading the numbers

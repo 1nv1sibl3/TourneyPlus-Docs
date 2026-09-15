@@ -22,21 +22,23 @@ Servers marked *(Add Bot)* don't have the bot yet; servers marked *(Banned)* or 
 
 | Section | Page | What it's for |
 | --- | --- | --- |
-| Main | **Dashboard** | Overview: active events, teams, upcoming matches, prize pool totals, activity feed, charts |
+| Main | **Dashboard** | Overview: active events, teams, matches, prize pool, activity feed, charts |
 | Main | **Tournaments** | Tournament list, creation (round-plan builder), per-event management |
 | Main | **Scrims** | Scrim list, creation, per-scrim teams/groups/screens management |
+| Main | **Daily Scrims** | Daily scrim list, creation, per-day management |
 | Main | **Matches** | Single-match lobbies: list, creation, per-match management |
+| Main | **Billing** | Your servers, plan usage, redeem codes, transaction history |
 | Operations | **Results Hub** | Review and process match results across all events |
-| Operations | **Prize Pool** | Prize pool management |
-| Operations | **Custom Forms** | Custom registration forms and submission data |
-| — | **Daily Scrims** | Daily scrim list and management (linked from Scrims/Messages sections) |
-| — | **Verification** | Screenshot verification and tag check setup |
-| — | **Point Table** | Leaderboard image templates |
-| — | **Settings** | Per-server bot profile, modlog, autorole, tags, sticky messages, embeds |
-| — | **Profile** | Your account, subscription, and quota usage |
-| — | **Pricing / Payment** | Plan browsing and checkout |
+| Operations | **Custom Forms** | Custom registration forms, entries, import/export |
+| Operations | **Verification** | Screenshot verification and tag check setup |
+| Operations | **Point Table** | Leaderboard image templates |
+| Operations | **Settings** | Per-server bot profile, modlog, autorole, tags, sticky messages, embeds |
+| — | **Profile** | Your account, organizer stats, achievements, subscription, and quota usage (avatar menu) |
+| — | **Pricing / Payment** | Plan browsing and checkout (also **Upgrade Plan** in the sidebar) |
 
-An **Admin Panel** section (Dashboard, Server Monitor, User Manager) appears for platform staff.
+The top bar carries a **billing summary** (the selected server's plan with recent transactions) next to the avatar menu. An **Admin Panel** section (Dashboard, Server Monitor, User Manager) appears for platform staff.
+
+The dashboard is fully responsive — the sidebar becomes a slide-out menu on phones and tablets, and every page adapts to small screens.
 
 See the [Page Map](page-map.md) for the full route list.
 
@@ -44,10 +46,11 @@ See the [Page Map](page-map.md) for the full route list.
 
 The overview page shows, filtered by your server/game selections:
 
-- Stat cards: active tournaments, active scrims, upcoming matches, total teams, prize pool.
-- Charts: activity over time, match outcomes.
-- Recent activity log.
-- Quick links to create events.
+- Primary stat cards: active tournaments, tier scrims, your billing & plan, total teams.
+- Secondary stat cards: total matches (all time), peak concurrent players, average match duration, total prize pool across hosted events.
+- Charts: matches per day, tier distribution, daily analytics.
+- Top performing teams.
+- Recent activity log and quick links to create events.
 
 ## Server/game filtering
 
@@ -70,6 +73,6 @@ The dashboard talks to the bot through a real-time bridge. In practice:
 
 ## Best practices
 
-- Don't double-click state-changing buttons (Start/Stop Registration); wait for the state update.
+- Don't double-click state-changing buttons (Start/Stop Registration); wait for the state update. On tournaments and single matches, registration start/stop opens a confirmation that shows the live counts (confirmed / pending / queued registrations) — review them, then confirm.
 - Use **Refresh** when a page looks stale before assuming failure.
 - Prefer the dashboard for bulk operations (kicking teams, editing many results) and Discord for live, in-channel operations.

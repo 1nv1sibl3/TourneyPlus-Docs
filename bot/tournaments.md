@@ -42,6 +42,7 @@ Click **Create Tournament** and fill the lettered settings:
 | Game | BGMI / FREEFIRE / VALORANT / CS2 |
 | Reaction Emojis | Accept/reject reactions |
 | Delete Rejected | On: rejected messages are auto-deleted. Off: kept and marked with the reject reaction |
+| Rejection Delete Delay | Seconds a rejected message stays visible before deletion — `0`–`600`, default `15`. `0` deletes immediately. Only applies while **Delete Rejected** is on |
 
 **Save** enables once registration channel, success role, confirm channel, total slots, and teams per group are set.
 
@@ -71,10 +72,11 @@ The plan is configured in the setup wizard (or the dashboard's create flow, whic
 | **Recreate Groups** | Rebuild the round's channels/roles (asks whether to delete the previous round's assets) |
 | **Round Shuffle** | Preview and execute the promotion to the next round (promoted vs eliminated shown; warns about incomplete matches; option to keep old round channels for history) |
 | **Send Slotlist** | Post the round/group slot list |
-| **Send ID Pass** | Post room ID / password / map for the group's next match |
-| **Open Screens** / **Close Screens** | Control the group's screenshot window |
-| **Process Screens** | Submit collected screenshots for AI processing |
+| **Send ID/Pass** | Post room ID / password / map for the group's next match |
+| **Collect Screens** / **Stop Screens** | One state-aware button — opens the screenshot window when closed, closes it when open |
+| **Process SS** | Submit collected screenshots for AI processing |
 | **Leaderboard** | Compute and publish a leaderboard — group or full-round scope; specific match or combined when multiple matches per group; optional manual placement/kills adjustment afterwards |
+| **Set Round** | Jump the panel to a specific round |
 | **Resync Roles** | Reconcile group role membership with rosters |
 | **Lock Chat** / **Unlock Chat** | Toggle the group channel's write permission for the group role |
 | **Shuffle History** | View past round shuffle records |
@@ -91,8 +93,8 @@ If registrations have advanced to a later round but group channels/roles only ex
 2. Start registration; teams register (see [Registration Flow](registration-flow.md)).
 3. Close registration (manually or automatically when full).
 4. **Manage Groups → Sync Groups** — Round 1 groups are created with roles and channels.
-5. For each group: **Send Slotlist**, **Send ID Pass**, **Open Screens**.
-6. Collect screenshots; **Process Screens**; verify results.
+5. For each group: **Send Slotlist**, **Send ID/Pass**, **Collect Screens**.
+6. Collect screenshots; **Process SS**; verify results.
 7. **Leaderboard** — publish Round 1 standings.
 8. **Round Shuffle** — preview, confirm, optionally keep old round channels.
 9. **Recreate/Sync Groups** for Round 2; repeat from step 5.
@@ -102,6 +104,7 @@ If registrations have advanced to a later round but group channels/roles only ex
 
 - Registration can be paused and resumed at any time.
 - The editor's slotlist channel doubles as the confirm channel.
+- When **Delete Rejected** is on, a rejected registration is marked with the reject emoji, the reason is posted in the channel (pinging the leader), and the message is removed after the configured **Rejection Delete Delay** — `0` deletes it immediately. This applies both to automatic rejections (bad format, fake tags, duplicate team name, …) and to registrations you reject manually with the cross reaction. Scrims and single matches keep their fixed short grace period instead.
 - Eliminated teams keep their historical results; player stats accumulate across all events.
 - Leaderboards can be published as embeds or styled images when a point-table template exists (see [Leaderboards](leaderboards.md)).
 

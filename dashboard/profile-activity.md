@@ -1,14 +1,37 @@
 # Profile & Activity
 
-Route: `/profile`. Your account, your subscriptions, and your quota usage — filtered to the selected server.
+Route: `/profile`. Your account, your achievements as an organizer, your subscriptions, and your quota usage — filtered to the selected server.
 
 <!-- screenshot: dashboard-profile-page -->
 
 ## Account details
 
-- Discord identity (avatar, display name).
+- Discord identity — avatar and banner on a profile-style header.
+- **Connect Discord** — a one-click button that links your Discord account (used for account linking and sign-in).
 - Personal stats: total matches, kills, averages, events and teams played (the same lifetime data as the bot's `/profile`).
 - Editable profile fields where applicable.
+
+## Organizer stats
+
+A set of stat cards summarizes your history as an organizer:
+
+- **Hosted** — total events you've hosted (all types, all time).
+- **Matches** — matches hosted.
+- **Organizer score** — a 0–100 rating of your organizing activity.
+- Per-type breakdowns — tournaments, scrims, daily scrims, and single matches hosted.
+
+## Achievements
+
+The **Achievements** tab tracks 14 achievements — from first-event milestones (*First Steps*, *Bracket Debut*) through volume milestones (*Tournament Master*, *Scrim Commander*, *Daily Grinder*, *Match Veteran*, *Event Legend*) to versatility and loyalty (*All-Rounder*, *One Year Strong*). Each achievement shows honest progress computed from your real stats, and locked achievements show what's needed to earn them.
+
+Earned achievements can be shared:
+
+- Platform buttons post your **public share page** — a standalone card at `tourneyplus.xyz/share/achievement/…` with a generated image — to X, LinkedIn, WhatsApp, or Instagram.
+- Copy the card image, download it, or use your device's native share sheet on mobile.
+
+## Quota history
+
+The **History** tab shows a timeline of your quota consumption — every usage event in chronological order, so you can audit exactly what was consumed, by whom, and when.
 
 ## Subscription details
 
@@ -17,6 +40,8 @@ The **My Subscription** section lists:
 - Your plans and assignments (plan name, code, category, trial flag).
 - Per assignment: status, scope type, start and end dates, the server it applies to, and any coupon-provided bonus entitlements.
 - The selected server's active plan summary: plan name, price, duration unit, assignment window, and source.
+
+Billing tasks — redeeming codes, invoices, and per-server plan usage — live on the dashboard's [Billing page](pricing-checkout.md#the-billing-page).
 
 ## Server quota activity
 

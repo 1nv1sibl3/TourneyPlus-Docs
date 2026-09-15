@@ -1,6 +1,6 @@
 # Coupons & Redeem Codes
 
-Coupon codes applied at checkout for a discount, bonus (top-up) entitlements, or both.
+Coupon codes applied at checkout for a discount, bonus (top-up) entitlements, or both — and some codes can be redeemed directly without a purchase.
 
 ## Applying a coupon
 
@@ -8,6 +8,10 @@ Coupon codes applied at checkout for a discount, bonus (top-up) entitlements, or
 2. Enter the code in the **coupon** field and apply.
 3. The checkout preview updates: base amount, discount, and final amount. If the coupon carries top-up entitlements, they are listed too.
 4. Complete the payment — the coupon is locked to the transaction and the entitlements merge into your assignment.
+
+## Redeeming a code without a purchase
+
+Codes you receive outside a purchase (promotions, compensations) can be redeemed on the dashboard's [Billing page](../dashboard/pricing-checkout.md#the-billing-page): enter the code and press **Redeem**. Depending on the code, it grants its plan or merges its bonus entitlements into your assignment — no checkout needed. The redemption applies to your account, or to the server selected in the page's usage section.
 
 Codes are case-insensitive (normalized to upper case). A coupon preview that fails shows the reason (invalid, expired, minimum order not met, not allowed for this plan/scope).
 
@@ -47,4 +51,4 @@ Trials are separate: a trial plan assignment granted on its own rules (see [Pric
 
 ## Where codes come from
 
-Codes are distributed by the TourneyPlus team (promotions, partnerships, compensations). There is no public code listing; if you received a code, apply it at checkout as above.
+Codes are distributed by the TourneyPlus team (promotions, partnerships, compensations). There is no public code listing; if you received a code, redeem it on the Billing page or apply it at checkout as above.

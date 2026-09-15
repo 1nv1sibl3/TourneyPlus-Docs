@@ -87,12 +87,12 @@ The Group Tools panel manages a scrim's groups (created automatically when regis
 | Button | What it does |
 | --- | --- |
 | Group selector / page controls | Pick the active group (paged, 20 per page) |
-| **Send ID Pass** | Post room ID / password / map for the group |
-| **Open Screens** / **Close Screens** | Control the screenshot window |
+| **Send ID/Pass** | Post room ID / password / map for the group |
+| **Collect Screenshots** / **Stop Collecting** | Open / close the screenshot window |
 | **Process Images** | Submit collected screenshots for AI processing |
 | **Publish Leaderboard** | Publish standings for the group |
 | **Flexible Leaderboard** | Choose scope (round/day/overall) before publishing |
-| **Unlock Group** / **Lock Group** | Toggle the group channel's write permission for the group role |
+| **Unlock Chat** / **Lock Chat** | Toggle the group channel's write permission for the group role |
 | **Organize Groups** | (Re)generate group roles and channels |
 | **Shuffle Tiers** | Run a manual tier shuffle — choose Normal (top/bottom per group) or Fill (promote-only), and keep or reset scores |
 | **Resync Roles** | Reconcile group role membership with actual rosters (adds missing, strips stale) |

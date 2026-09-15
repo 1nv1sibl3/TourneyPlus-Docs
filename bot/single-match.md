@@ -42,6 +42,7 @@ Unlike scrims (one per server), you can run **multiple single matches simultaneo
 | Confirm Channel | Optional |
 | Open Role | Role pinged when registration opens |
 | Game | BGMI / FREEFIRE / VALORANT / CS2 |
+| Leader-Only Roles | Dashboard setting: when on, only the team leader receives the group role instead of every member (same option as daily scrims and tournaments) |
 
 Two extra infrastructure buttons appear when editing an existing match:
 
@@ -56,8 +57,8 @@ The group channel is named `<match-name>-match` and the group role `sm<id>#1 Pla
 2. **Registration** opens at the open time, or toggle it manually. Teams register in the reg. channel (see [Registration Flow](registration-flow.md)).
 3. Registration closes automatically when the last slot fills.
 4. One group with its own role and channel is created when registration closes.
-5. From **Group Tools**: send the slot list, send the **ID Pass** (room ID/password/map), and **Open Screens** for the screenshot window.
-6. Team leaders submit one screenshot in the group channel; **Process Screenshots** sends them for AI result extraction, or enter results manually via the leaderboard flow.
+5. From **Group Tools**: send the slot list, send the **ID/Pass** (room ID/password/map), and **Collect Screenshots** to open the screenshot window.
+6. Team leaders submit one screenshot in the group channel; **Process Images** sends them for AI result extraction, or enter results manually via the leaderboard flow.
 7. **Leaderboard** → publish. Players can press **Request Review** on the published leaderboard if something looks wrong.
 8. Delete the match when finished.
 
@@ -68,10 +69,14 @@ The group channel is named `<match-name>-match` and the group role `sm<id>#1 Pla
 - Only the **team leader** can submit (others' screenshots are removed with a DM explanation).
 - **One screenshot per team** per round — duplicates from teammates are removed.
 - Accepted file types: `.png`, `.jpg`, `.jpeg` (or any `image/*` attachment).
-- The screenshot window must be **open** (Open Screens) for submissions to count.
+- The screenshot window must be **open** (Group Tools → **Collect Screenshots**) for submissions to count.
 - Moderators with message-management permissions can post in the channel without being treated as submitters.
 
 See [Screenshot Flow & Results](screenshot-flow.md) for the full pipeline.
+
+## Manual group-role assignment
+
+Organizers can drag the group role onto a member manually — the bot notices immediately, captures the assignment, and records it in the single-match log channel. The capture is resilient to brief database hiccups: it retries automatically for about a minute if the database is momentarily unreachable. If it truly cannot save the assignment, the log channel gets an **Admin Audit FAILED** notice asking you to re-apply the role — a lost assignment is never silent.
 
 ## Deleting
 

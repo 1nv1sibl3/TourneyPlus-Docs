@@ -34,20 +34,20 @@ Running `/setup` creates four private log channels and four moderator roles:
 | Single Match | `single-match-mod` | `tourneyplus-single-match-logs` |
 | Daily Scrim | `daily-scrims-mod` | `tourneyplus-daily-scrims-logs` |
 
-Members with `Manage Server` can always do everything a mod role allows. See [Setup & Permissions](bot/setup-and-permissions.md).
+Members with `Manage Server` can always do everything a mod role allows. See [Setup & Permissions](../bot/setup-and-permissions.md).
 
 ## How Discord and the dashboard work together
 
 - Most event operations are available **both** in Discord (via manager panels and commands) and on the **web dashboard**.
 - The two surfaces synchronize in real time. If an action seems stuck, allow a few seconds and refresh.
-- Billing, plan purchases, quota views, and data exports are dashboard-only. In-channel registration and screenshot submission are Discord-only.
+- Billing, plan purchases, and quota views are dashboard-only. In-channel registration and screenshot submission are Discord-only.
 
 ## Games supported
 
-TourneyPlus currently supports **BGMI, FREEFIRE, VALORANT, and CS2**. Events and forms are tagged with a game, and the dashboard has a global game filter. Note that the rank-based placement points (see [Leaderboards](bot/leaderboards.md)) apply to battle-royale games (BGMI, FREEFIRE); non-battle-royale games (VALORANT, CS2) score kills only.
+TourneyPlus currently supports **BGMI, FREEFIRE, VALORANT, and CS2**. Events and forms are tagged with a game, and the dashboard has a global game filter. Note that the rank-based placement points (see [Leaderboards](../bot/leaderboards.md)) apply to battle-royale games (BGMI, FREEFIRE); non-battle-royale games (VALORANT, CS2) score kills only.
 
 ## Next steps
 
-- Install the bot and run setup: [Setup & Permissions](bot/setup-and-permissions.md)
+- Install the bot and run setup: [Setup & Permissions](../bot/setup-and-permissions.md)
 - Run your first event: [Quickstart](quickstart.md)
 - Understand the vocabulary: [Glossary](glossary.md)

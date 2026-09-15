@@ -1,6 +1,6 @@
 # Support Commands
 
-Quick-reference for TourneyPlus's user-facing support commands. All of them work as slash commands and with the prefix.
+Quick-reference for TourneyPlus's user-facing support commands. All of them work as slash commands and with the prefix, and all of them work in the bot's DMs too.
 
 ## `/bugreport`
 

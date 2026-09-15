@@ -12,7 +12,9 @@ ssverify gates access to a role by requiring players to submit a set number of v
 | Role | The role granted on verification |
 | Required screenshots | How many valid submissions are needed |
 | Screenshot type | What is verified: any screenshot, YouTube, Instagram, Loco, Rooter, or a **custom filter** (your own keywords) |
-| Page name / page URL | The platform/page being verified (used by the type checks) |
+| Page name / page link | The platform/page being verified (used by the type checks) |
+| Channel name (display) / channel link | How the target channel is shown in the instructions players see — set both and the notice renders as a clickable link |
+| Success message | Sent when a member finishes verification |
 | Allow same screenshots | Whether duplicates (same image hash, same user) count |
 | Grant mode | Leader only, or full team (leader picks the teammates after verifying) |
 
@@ -26,7 +28,7 @@ ssverify gates access to a role by requiring players to submit a set number of v
 4. Valid screenshots are counted; the reply embed shows progress (Submitted X/Y).
 5. At the required count, the role is granted — in **full-team** mode the leader is prompted to select their teammates, and the role is granted to everyone on confirm.
 
-Holders of `tourney-mod`, `scrims-mod`, or `single-match-mod` are **exempt** from verification entirely.
+Verification applies to everyone posting in the channel — moderators are verified like any other member, so keep mod chatter out of the verification channel.
 
 ### Limits and errors
 
@@ -47,7 +49,8 @@ Configuration per channel:
 | Setting | Meaning |
 | --- | --- |
 | Channel | The channel designated as a test channel |
-| Required mentions | The mention count the test validates against (0–10) |
+| Required mentions | The mention count the test validates against (dashboard: 1–100; the `/tagcheck` Discord setup asks for 0–10) |
+| Role to grant (optional) | A role granted to members who pass the tag check — leave empty to keep tag checking role-free |
 
 <!-- screenshot: dashboard-verification-tagcheck -->
 

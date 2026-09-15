@@ -68,17 +68,17 @@ For a single match, one group is created automatically when registration closes.
 
 1. From the Single Match Manager, click **Group Tools**.
 2. Use the buttons to manage the group:
-   - **Send ID Pass** — post room ID / password / map for the match (players can press "Get in Copy Format" on the posted message).
-   - **Open Screens** — open the screenshot window. Team leaders can now submit one screenshot in the group channel.
-   - **Close Screens** — close the window.
-   - **Process Screenshots** — send submitted screenshots for AI result processing.
+   - **Send ID/Pass** — post room ID / password / map for the match (players can press "Get in Copy Format" on the posted message).
+   - **Collect Screenshots** — open the screenshot window. Team leaders can now submit one screenshot in the group channel.
+   - **Stop Collecting** — close the window.
+   - **Process Images** — send submitted screenshots for AI result processing.
 3. Alternatively, do this from the dashboard: open `/matches`, click the match, and use the same controls.
 
 <!-- screenshot: bot-group-tools-panel -->
 
 ## Step 5 — Review and publish the leaderboard
 
-1. From Group Tools, click **Leaderboard** (scrim/single-match: **Publish Leaderboard**).
+1. From Group Tools, click **Publish Leaderboard**.
 2. Choose the output format: a standard embed, or a styled **image leaderboard** if your server has a point-table template.
 3. Preview, then confirm **Publish**. The leaderboard is posted in the channel.
 4. Players can press **Request Review** on the published leaderboard to flag it for moderators — the review request lands in your log channel.

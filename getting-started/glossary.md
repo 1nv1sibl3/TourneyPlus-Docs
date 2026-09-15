@@ -31,6 +31,8 @@ The single source of truth for terminology used across all TourneyPlus documenta
 | **Open role** | The role pinged when registration opens. Defaults to `@everyone`. |
 | **DM verification (dead account check)** | Optional setting requiring each mentioned teammate to confirm participation via a DM button, filtering out dead/inactive accounts. |
 | **Team Profile** | A persistent, editable roster owned by a player per guild per game, used for button-based registration instead of tagging. |
+| **Custom form** | A button-driven registration panel collecting structured fields (owner / team / player scopes) and granting a role on completion. With the team-profile collector on, each entry becomes a saved team roster. |
+| **Sr. No.** | The serial number of a custom form entry — its position among that form's entries. Assigned once; never changes. |
 | **Multiregister** | Event setting allowing the same player to register multiple teams. |
 
 ## Matches and results
@@ -39,7 +41,7 @@ The single source of truth for terminology used across all TourneyPlus documenta
 | --- | --- |
 | **Match** | A logical match record within an event, with a round index, day index, and optional start time. |
 | **Screenshot window** | The period during which team leaders may submit a match screenshot in the group channel. |
-| **Screenshot submission** | A captured screenshot record, with statuses: `received`, `processing`, `processed`, `needs_review`, `rejected`. |
+| **Screenshot submission** | A captured screenshot record, with statuses: received, processing, processed, needs review, rejected. |
 | **OCR job** | An AI processing job that extracts rank and kills from a submitted screenshot. |
 | **Placement / Rank** | The team's finishing position in a match, extracted by OCR or entered manually. |
 | **Kills** | The team's kill count for a match. |
@@ -74,8 +76,9 @@ The single source of truth for terminology used across all TourneyPlus documenta
 
 | Term | Definition |
 | --- | --- |
-| **Player profile** | A persistent per-user record (IGN, game profiles, stats) that survives across events and servers. |
+| **Player profile** | A persistent per-user record (per-game IGNs/IDs, stats, achievements) that survives across events and servers. |
 | **IGN** | In-game name. Collected via profile, custom forms, or inline in the registration message. |
+| **Achievement** | An automatically earned profile emblem for hosting and competing milestones — bronze, silver, or gold. |
 | **Plan** | A subscription product (e.g. Free, Basic, Pro) defined by entitlements and quotas. |
 | **Entitlement** | A per-plan feature flag or quota (e.g. `event.tournament.create`, `ai.ss.process`). |
 | **Assignment** | The binding of a plan to a user, a server, or both, with a start/end window. |

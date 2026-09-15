@@ -28,6 +28,11 @@ For a selected match, per team:
 
 Edits are recorded with source `manual` (or `hybrid` when you adjust an AI-parsed value), the reviewer, and a timestamp. The original AI payload is kept for audit.
 
+## AI parsing safeguards
+
+- **Low-match submissions are flagged, not zeroed.** When an AI-processed screenshot matches fewer than half of the expected players (blurry, cropped, or wrong image), the submission is marked **Needs review** instead of committing zeros — open it, enter the correct values, and confirm.
+- **Multi-screenshot lobbies are safe.** A later screenshot never wipes the results of teams that were only visible in an earlier one — teams without a parse in a given screenshot are skipped, not zeroed, and are listed by name in the submission's note.
+
 ## Plan-based behavior
 
 - **Plan with AI processing** — review parsed values as above.
@@ -37,7 +42,7 @@ Edits are recorded with source `manual` (or `hybrid` when you adjust an AI-parse
 
 1. Every rank is correct (ranks drive placement points — see [Leaderboards](../bot/leaderboards.md)).
 2. Kills are correct (1 point each).
-3. `needs_review` submissions are resolved — confirm or fix uncertain parses.
+3. **Needs review** submissions are resolved — confirm or fix uncertain parses.
 4. Teams with no submitted values sit below teams with values (they show empty rank/kills, contributing 0).
 
 ## Notes

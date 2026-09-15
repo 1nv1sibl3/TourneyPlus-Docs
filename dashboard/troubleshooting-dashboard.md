@@ -20,7 +20,7 @@ Disabled buttons encode state:
 
 If you believe a button should be enabled, refresh first; persistent disablement usually means a permission or plan gate.
 
-## Permission errors (403)
+## Permission errors
 
 | Situation | Fix |
 | --- | --- |
@@ -42,7 +42,7 @@ Avoid double-clicking state-changing buttons. Click once and wait for the state 
 ## Leaderboard looks incorrect
 
 - Verify the scoring formula: `placement points + kills` (placement points only for battle-royale games; see [Leaderboards](../bot/leaderboards.md)).
-- Check for `needs_review` results in the [Results Hub](results-hub.md).
+- Check for **Needs review** results in the [Results Hub](results-hub.md).
 - Re-open the result rows and confirm values; republish after corrections.
 - Remember sorting: points, then kills, then name.
 
@@ -64,6 +64,21 @@ Before deleting an event that shares its registration/slotlist channels with oth
 | *You do not have permission to purchase this plan for the selected server.* | Select a server you manage, or pick a user-scoped plan. |
 | *Payment verification failed.* | Retry checkout; contact support with the transaction id if it persists. |
 | Plan didn't activate after payment | Activation runs on the payment webhook; allow a few minutes, then check `/profile`. If still missing, contact support with the payment reference. |
+
+## Custom Forms issues
+
+| Symptom | Explanation / fix |
+| --- | --- |
+| Sr. No. in the entries grid has gaps (e.g. 1, 2, 5) | Withdrawn entries keep their numbers by design — switch the status filter to **All statuses** to see them. Numbers always match what the bot shows. |
+| *"The form fields were changed elsewhere after you loaded them…"* | Another organizer edited the form's fields while you had the editor open. Your save was rejected to protect collected answers — reload the form and re-apply your changes. |
+| Import rejected: *"…imports are limited to 100 columns"* / *"…5,000 rows"* | Split the file: remove unused columns or import in batches under 5,000 rows. Files are also limited to 10 MB. |
+| Import rejected: *"…limited to 40 total fields on a form"* | The import would auto-create more fields than the 40-field cap allows — map fewer columns to new fields. |
+| Can't remove a member from an entry | The leader can't be removed (they're the entry's key) — remove the other members, or withdraw the entry. Saves below the form's minimum team size are blocked: add members or withdraw. |
+| An entry's name/email/phone shows blank | Owner details only resolve for users who are members of the server you're viewing. Type a value into the cell to store a per-entry override. |
+
+## Results marked Needs review
+
+An AI-processed screenshot where fewer than half of the expected players matched (blurry, cropped, or wrong image) is flagged **Needs review** instead of committing zeros — open it in the [Results Hub](results-hub.md) and enter the correct values manually.
 
 ## Data looks stale or missing
 

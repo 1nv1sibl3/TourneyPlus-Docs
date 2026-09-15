@@ -1,6 +1,20 @@
 # Pricing & Checkout
 
-Routes: `/pricing` (plan listing) and `/payment` (checkout with `?planId=…` or `?planCode=…`).
+Routes: `/pricing` (plan listing), `/payment` (checkout with `?planId=…` or `?planCode=…`), and `/billing` (your billing hub).
+
+## The Billing page
+
+`/billing` is the hub for everything you've bought:
+
+| Section | What it shows |
+| --- | --- |
+| **Subscribed servers** | The servers covered by your plans, with their active plan per server |
+| **Redeem a coupon** | Enter a code you received — some codes grant a plan directly, others add bonus entitlements. Applies to your account, or to the server picked in the usage section |
+| **Quota usage** | Per-server quota consumption (pick the server to inspect) |
+| **Upgrade your plan** | The plan catalog with one-click checkout |
+| **Transactions** | Your full invoice history — date, plan, period, invoice number, scope, amount, and status (Paid / Pending / Failed / Refunded) |
+
+The same billing summary (the selected server's plan and recent transactions) is available from the top bar without leaving what you're doing.
 
 ## The pricing page
 
@@ -52,4 +66,4 @@ A "monthly" subscription period is **28 days**, matching the quota window model.
 
 ## Managing an existing subscription
 
-From `/profile` you can view assignments, windows, and usage. Cancellation and refund handling follow the published [policies](https://tourneyplus.xyz/refund).
+From `/billing` you can view your servers, redeem codes, and browse transactions; from `/profile` you can view assignments, windows, and usage. Cancellation and refund handling follow the published [policies](https://tourneyplus.xyz/refund).

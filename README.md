@@ -2,7 +2,7 @@
 
 Welcome to the official user guide for **TourneyPlus** — a subscription-gated esports management platform that runs entirely inside Discord, with a web dashboard for billing and advanced management.
 
-**Current release:** Bot `2.0.0` · Dashboard `2.0.0`
+**Current release:** Bot `2.2.0` · Dashboard `2.2.0`
 
 ## What TourneyPlus does
 
@@ -15,7 +15,7 @@ TourneyPlus runs four kinds of events, end to end, inside your server:
 | **Single Match** | One-off matches (one round, one group) | Fastest flow: create → register → collect results → publish |
 | **Daily Scrim** | Day-resetting scrims with per-day rosters and results | Resets every day; per-day leaderboards |
 
-Around the events sit supporting features: player profiles and stats, screenshot verification (ssverify), tag check test channels, custom registration forms, team profiles, leaderboards with image templates, and subscription plans with quotas.
+Around the events sit supporting features: player profiles with per-game identities and achievements, screenshot verification (ssverify), tag check test channels, custom registration forms, team profiles, leaderboards with image templates, and subscription plans with quotas.
 
 ## Where to start
 
@@ -31,7 +31,7 @@ Everything can be driven from Discord using slash commands (or the default `!` p
 Some tasks are surface-specific:
 
 - **Discord only:** interactive manager panels (button-driven), in-channel registration, screenshot submission, screenshot verification, tag check channels.
-- **Dashboard only:** purchasing plans, redeeming coupons at checkout, quota usage views, prize pool management, leaderboard image templates, CSV export of custom form data.
+- **Dashboard only:** purchasing plans, redeeming coupons at checkout, quota usage views, prize pool management, leaderboard image templates.
 
 ## Conventions used in this guide
 

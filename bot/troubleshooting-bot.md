@@ -57,7 +57,7 @@ The DM text states the reason. Common cases:
 
 | DM text | Cause |
 | --- | --- |
-| *Only the registered team leader can upload match screenshots.* | A non-leader submitted. Transfer leadership first with `/team transfer` (before any submission exists). |
+| *Only the registered team leader can upload match screenshots.* | A non-leader submitted. Transfer leadership first with the **Transfer** button on your `/team` card (before any submission exists). |
 | *Your team has already submitted a screenshot for this round.* | One per team per round; ask a moderator to replace it via the dashboard. |
 | *A teammate already submitted the screenshot for this round…* | Duplicate from another member. |
 | *…did not include a valid screenshot. Please attach a `.png`, `.jpg`, or `.jpeg` file…* | Wrong file type or no attachment. |
@@ -68,27 +68,35 @@ The DM text states the reason. Common cases:
 
 The processing provider's quota is spent. Report it — the operators will restore capacity. Meanwhile, enter results manually.
 
+### "⚠️ Low match rate (N players matched) — please verify the results manually."
+
+Fewer than half of the roster's IGNs could be matched to the screenshot, so the AI flagged the job instead of trusting the zeros. Check the team's results on the leaderboard or the dashboard Results Hub and correct them manually (see [Screenshot Flow](screenshot-flow.md)).
+
+### "Admin Audit FAILED … the assignment was NOT saved. Please re-apply the role."
+
+A manually assigned single-match group role could not be recorded — the database was unreachable even after automatic retries. Drag the role onto the member again once the notice appears; nothing needs rebuilding.
+
 ### "Failed to process your screenshots. Try again later."
 
 Transient OCR transport failure. Retry; if persistent, use manual results.
 
 ### Screenshot submissions aren't counted
 
-The window must be **open** (Group Tools → **Open Screens**), the message must be in the **group channel**, and it must pass the rules above.
+The window must be **open** (Group Tools → **Collect Screenshots** / **Collect Screens**), the message must be in the **group channel**, and it must pass the rules above.
 
 ## Teams
 
 ### "Score records already exist for this team. Team renaming is locked." / "…Leadership transfer is locked."
 
-Renaming and leadership transfer are locked after scoring starts (transfer also locks after any screenshot submission). This is by design to protect result attribution.
+The **Rename** / **Transfer** buttons on your `/team` card are locked after scoring starts (transfer also locks after any screenshot submission). This is by design to protect result attribution.
 
 ### "Opt-out window has closed for this week."
 
 The scrim's opt-out cutoff has passed. The team plays this week or is removed by a moderator.
 
-### "You are registered in multiple events. Re-run with an explicit event ID."
+### The Rename / Transfer / Opt Out buttons are disabled
 
-Add the event ID: `team rename 42 NewName` / `team transfer @User 42`.
+They act on an **active** registration — with none, there is nothing to rename, transfer or withdraw. With several, a picker asks which team you mean.
 
 ## Subscription denials
 

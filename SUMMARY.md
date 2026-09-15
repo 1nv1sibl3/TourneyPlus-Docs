@@ -16,7 +16,7 @@
 * [Tournaments](bot/tournaments.md)
 * [Single Match](bot/single-match.md)
 * [Daily Scrims](bot/daily-scrims.md)
-* [Registration Flow](bot/registration-flow.md)
+* [Registration Flow & Custom Forms](bot/registration-flow.md)
 * [Screenshot Flow & Results](bot/screenshot-flow.md)
 * [Leaderboards](bot/leaderboards.md)
 * [Team Commands](bot/team-commands.md)

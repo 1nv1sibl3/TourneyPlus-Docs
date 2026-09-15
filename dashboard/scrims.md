@@ -48,7 +48,7 @@ Tabs organize the work:
 
 ## Shuffles
 
-- From the detail page you can trigger a **group shuffle** (the dashboard's auto-shuffle service can also dispatch shuffles automatically when a tier's window passes, where configured).
+- From the detail page you can trigger a **group shuffle**. Where configured, the dashboard's auto-shuffle service dispatches shuffles automatically when a tier's window passes — scheduled by timer rather than polling, so shuffles fire on time (no missed or delayed rounds) and pending shuffles survive service restarts.
 - **Shuffle logs** record every shuffle: mode, score handling, and team movements, for audit.
 - Per-tier shuffle configuration is editable on the dashboard.
 

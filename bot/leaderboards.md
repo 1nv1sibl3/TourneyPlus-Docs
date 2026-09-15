@@ -75,4 +75,4 @@ After a leaderboard is computed and shown (tournament group tools), you can opt 
 
 ## The Results Hub and dashboard parity
 
-The dashboard's [Results Hub](../dashboard/results-hub.md) is the review surface for the same data: verify parsed values, correct them, and resolve `needs_review` submissions before publishing. There is no separate "error" concept on publish — a null kills value simply counts as 0 and never blocks publishing.
+The dashboard's [Results Hub](../dashboard/results-hub.md) is the review surface for the same data: verify parsed values, correct them, and resolve **Needs review** submissions before publishing. There is no separate "error" concept on publish — a null kills value simply counts as 0 and never blocks publishing.

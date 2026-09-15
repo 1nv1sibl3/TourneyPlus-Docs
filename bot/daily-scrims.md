@@ -21,7 +21,7 @@ Open the manager with `/dailyscrim` (aliases `dscrim`, `dailyscrims`, `ds`). Req
 | **Scrims Role** | Configure the success role |
 | **Public Slot Manager** | Post the live public slot panel to a channel |
 | **Groups & Matches** | Group and match management per day |
-| **Leaderboard** | Publish the current day's leaderboard |
+| **Leaderboard** | Publish standings — today, a past day, or a single group; embed or point-table image, with preview before publishing (same flow as tournaments) |
 | **Enable/Disable** | Toggle the whole daily scrim (multi-select) |
 | **Analyze Scrims (Test Mode)** | Diagnostics panel for troubleshooting |
 
@@ -50,7 +50,7 @@ This is the recommended registration flow for daily scrims in large communities.
 2. Registration opens at the configured time (or via **Instant Start/Stop Reg**).
 3. Teams register (message-based in the reg. channel, or button-based via the public slot manager).
 4. **Groups & Matches** manages the current day's groups: send slotlists, ID passes, open/close screenshot windows, process screenshots.
-5. **Leaderboard** publishes the current day's standings.
+5. **Leaderboard** publishes standings for today, a past day, or a single group — as a quick embed or a styled point-table image, previewed before publishing.
 6. The next day starts fresh; previous results remain queryable on the dashboard's daily-scrims pages.
 
 ## Managing from the dashboard

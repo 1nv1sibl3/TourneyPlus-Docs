@@ -19,6 +19,17 @@ The same management surface as scrims, scoped to the single match:
 
 Because a single match has exactly one round and one group, there are no round selectors or shuffle controls — the flow is linear: register → collect → publish.
 
+## Settings
+
+Single matches carry the same settings as tournaments:
+
+- **Registration window** — schedule registration start and end times in advance; the bot opens (and closes) registration automatically at the scheduled moment, and the page shows a live "starts at" badge.
+- **Message handling** — delete rejected messages, delete extra messages, allow duplicate/fake tags.
+- **DM verification** and **Team Profile registration** toggles.
+- **Leader-only roles** — grant the success role to the team leader only instead of the whole team.
+
+Registration start/stop opens the shared confirmation dialog with live counts (confirmed / pending / queued registrations) before anything changes.
+
 ## Scheduling the match
 
 From the detail page, set the match's start time, map, and room details; they feed the ID pass posted to the group channel. Times are IST.

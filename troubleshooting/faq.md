@@ -30,6 +30,15 @@ Their registration is on hold — a teammate hasn't completed their player profi
 **Can a team change its name or leader mid-event?**
 Yes, until scoring starts: `/team rename` and `/team transfer`. Both lock once score records exist (transfer also locks after a screenshot submission exists).
 
+**The custom-form entries list skips numbers (e.g. 1, 2, 5) — are entries missing?**
+No. Withdrawn entries keep their Sr. No. by design, so active-only views can show gaps. Switch the status filter to All statuses to see withdrawn entries; numbers always match the bot's confirmation cards.
+
+**Saving a custom form says the fields were changed elsewhere.**
+Another organizer edited the form while you had it open. The save is rejected to protect collected answers — reload the form and re-apply your changes.
+
+**My custom-form import was rejected.**
+Imports accept files up to 10 MB with at most 5,000 rows and 100 columns, and a form can hold at most 40 fields. Split the file or map fewer columns to new fields. Blank cells never wipe stored data, and rejected rows never touch existing entries.
+
 ## Results and leaderboards
 
 **The leaderboard shows 0 kills for a team that submitted.**
@@ -44,6 +53,9 @@ Yes — fix the results (Results Hub or manual adjustment), then publish again. 
 **Do I need the AI plan to use screenshots?**
 No. Without AI, the screenshot channel still works as proof/log; you enter rank and kills manually before publishing.
 
+**A result is marked Needs review — what does that mean?**
+The AI processed the screenshot but matched fewer than half of the expected players (blurry, cropped, or wrong image), so nothing was committed. Open it in the Results Hub and enter the correct values manually.
+
 ## Accounts and billing
 
 **Can one subscription cover multiple servers?**
@@ -56,7 +68,10 @@ Entitlements fall back to the Free baseline (for example, bot branding reverts).
 Activation runs on the payment webhook — allow a few minutes, then check `/profile` (dashboard) or `/premium` (Discord). If still missing, contact support with the payment reference.
 
 **A coupon code didn't apply.**
-See [Coupons & Redeem Codes](../subscriptions/coupons.md) for the common reasons; the preview shows the exact failure.
+See [Coupons & Redeem Codes](../subscriptions/coupons.md) for the common reasons; the preview shows the exact failure. Codes you receive outside a purchase can be redeemed directly on the dashboard's Billing page.
+
+**How do I share an achievement?**
+On your dashboard profile, open the Achievements tab and use Share on an earned achievement — it posts your public share card to X, LinkedIn, WhatsApp, or Instagram, or copies/downloads the image.
 
 ## Permissions
 
